@@ -1,15 +1,15 @@
 # Inception_V3
 A training, validation, and predict demo by using inception v3.
-### Usage
+## Usage
 
-1. Install Bazel 4.0 or higer version.
+### Install Bazel 0.4.3 or higer version.
 
-2. Install Tensorflow 0.12
+### Install Tensorflow 0.12
 ```sh
 $ source init.sh
 ```
 
-3. Build training data.
+### Build training data.
 
 Create a tar.gz file with structure below:
   ```sh
@@ -23,24 +23,24 @@ Create a tar.gz file with structure below:
 ```sh
 $  sh build_data.sh
 ```
-4. Train the data
+### Train the data
 To make sure that you have pre-trained Inception V3 model like model.ckpt-157585.
 ```sh
 $ sh train.sh
 ```
-5. Now you will get Checkpoint file
+### Now you will get Checkpoint file
 ```sh
 -rw-r--r-- 1 worker w  72K 01-23 12:51 model.ckpt-2000.index
 -rw-r--r-- 1 worker w  519 01-23 12:51 checkpoint
 -rw-r--r-- 1 worker w  13M 01-23 12:52 model.ckpt-2000.meta
 ```
-6. You can run eval.sh to see the validation result.
+### You can run eval.sh to see the validation result.
 ```sh 
 $ sh eval.sh
 2017-01-23 18:11:13.276846: starting evaluation on (train).
 2017-01-23 18:11:35.051256: precision @ 1 = 1.0000 recall @ 5 = 1.0000 [224 examples]
 ```
-7. Prepare to predict new data via Inception V3
+### Prepare to predict new data via Inception V3
 ```sh 
 $ sh build_test_data.sh
 ```
@@ -49,7 +49,7 @@ You will see
 $ ls
 test-00000-of-00001
 ```
-8. Get the prediction.
+### Get the prediction.
 ```sh 
 $ sh predict.sh 10
 2017-01-23 18:16:54.551870: starting evaluation on (test).
