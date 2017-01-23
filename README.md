@@ -21,6 +21,18 @@ Create a tar.gz file with structure below:
        rw-r--r-- worker/worker 823 2017-01-21  fish2.0/A5/1264412.jpg
  ```
 ```sh
+$ # Generate training dataset
+$ sh preprocess.sh
+$ ls 
+ .
+├── labels.txt
+├── train
+│   ├── negative
+│   └── positive
+└── validation
+    ├── negative
+    └── positive
+
 $  sh build_data.sh
 ```
 ### Train the data
