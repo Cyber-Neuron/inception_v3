@@ -78,5 +78,5 @@ $ sh predict.sh 10
 ```
 
 ### Modification
-1. Fixed the multi-thread problem when predict.
+1. Fixed the multi-thread problem during prediction (In a low efficiency way. LOL).
 2. Print the file name and corresponding prediction result.
